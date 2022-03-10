@@ -3,8 +3,16 @@
 # install.packages("leaflet")
 library(leaflet)
 
+coordinates <- read.csv("test.csv")
+head(coordinates)
+
 m <- leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=153.026, lat=-27.4705, popup="Brisbane")
+  addTiles() %>%
+  # The csv file must have the 'name', 'long' and 'lat' columns
+  addMarkers(lng=coordinates$long,
+             lat=coordinates$lat,
+             popup=coordinates$name)
+
+# Do another "%>% addMarkers(...)" to overlay another set of points
 
 print(m)
