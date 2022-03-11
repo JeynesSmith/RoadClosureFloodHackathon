@@ -1,3 +1,12 @@
+# Compute the distance of a route
+route_dist <- function(mat0) {
+  # return KM
+  colnames(mat0) = c("lon", "lat")
+  sum(geodist::geodist(mat0, sequential = TRUE)) / 1000
+}
+
+
+#==============================================================================
 # Filter the streets by a bounding box
 streets_within_bounds <- function(streets, bounds, method = "complete") {
   in_bbox <- lines_in_bbox(streets$geometry, bounds, method)
