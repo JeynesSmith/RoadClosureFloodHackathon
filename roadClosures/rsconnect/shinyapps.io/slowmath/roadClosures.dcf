@@ -1,0 +1,13 @@
+name: roadClosures
+title: roadClosures
+username:
+account: slowmath
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5830467
+bundleId: 5670050
+url: https://slowmath.shinyapps.io/roadClosures/
+when: 1646980968.91174
+lastSyncTime: 1646980968.91174
+asMultiple: FALSE
+asStatic: FALSE
